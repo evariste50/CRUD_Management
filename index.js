@@ -31,8 +31,8 @@ App.use("/api/student", require('./routes/router'))
 // })
 
 if(process.env.NODE_ENV ==='production'){
-    app.use(express.static(__dirname+'/dist/'))
-    app.get('*',(req,res)=>{
+    App.use(express.static(__dirname+'/dist/'))
+    App.get('*',(req,res)=>{
         res.sendFile(__dirname+'/dist/index.html')
     })
 }
